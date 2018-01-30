@@ -1,5 +1,8 @@
 {
   "expoServerPort": null,
   "packagerPort": null,
-  "packagerPid": null
+  "packagerPid": null,
+  "expoServerNgrokUrl": "https://hm-ckx.cadmoral.nativewildsock.exp.direct",
+  "packagerNgrokUrl": "https://packager.hm-ckx.cadmoral.nativewildsock.exp.direct",
+  "ngrokPid": 4416
 }
