@@ -11,7 +11,21 @@ export default class ListThumbnailExample extends Component {
     };
   }
 
-  componentDidMount() {
+
+handleOnPress(){
+ alert('Voter')
+ axios.post('http://0e3e6626.ngrok.io/appmobile/web/users', {
+   vote: true
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
+
+componentDidMount() {
     // Make a request for a user with a given ID
     axios.get('http://0e3e6626.ngrok.io/appmobile/web/users')
 
@@ -30,24 +44,29 @@ export default class ListThumbnailExample extends Component {
   render() {
     return (
       <Container>
-        <Content scrollEnabled={true}>
-          {this.state.items.map(item =>
-            <SwipeRow key={item.id}
-              rightOpenValue={-75}
-              body={
-                <View>
-                  <Thumbnail square size={80} large source={{ uri: item.picture }} />
-                  <Text first_name={item.first_name} surname={item.last_name}>{item.first_name} {item.last_name}</Text>
-                </View>
-              }
-              right={
-                <Button success onPress={() => alert('Confirmation de vote')}>
-                  <Icon active name="add" />
-                </Button>
-              }
-            />)}
-        </Content>
-      </Container>
-    );
+         <Header/> Wild Photos
+<Content scrollEnabled={true}>
+{this.state.items.map(item =>
+  <SwipeRow key={item.id}
+    rightOpenValue={-75}
+    body={
+      <View>
+       
+         <Thumbnail square size={100} large source={{ uri:item.picture }} />
+         <Body>
+         <Text first_name={item.first_name} surname={item.last_name}>{item.first_name} {item.last_name}</Text>
+        </Body>
+         
+      </View>
+    }
+    right={
+      <Button success onPress={this.handleOnPress.bind(this)}>
+        <Icon active name="add" />
+      </Button>
+    }
+/> )}
+</Content>
+</Container>
+);
   }
 }

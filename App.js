@@ -7,11 +7,14 @@ import Login from './components/Login';
 import Name from './components/Name';
 import Camera from './components/Camera';
 import List from './components/List';
+import Listvote from './components/Listvote'
 
 export default TabNavigator({
   Login: { screen: Login },
+
   Name: { screen: Name },
-  Camera: { screen: Camera },
-  Vote: { screen: List },
+  Camera: { screen: Camera }, 
+  Liste: { screen: List },
+  Listvote: {screen: Listvote}
 });
 
