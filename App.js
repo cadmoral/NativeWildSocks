@@ -11,7 +11,10 @@ export default TabNavigator({
    Camera: { screen: Camera }, TabTwo: { screen: TabTwo },
 });
 
+
 export default class App extends React.Component {
+
+
   render() {
     return (
       
