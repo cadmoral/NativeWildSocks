@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { TabNavigator } from 'react-navigation';
+import { Container, Header, Content, Form, Item, Input, Label } from 'native-base';
+import FixedLabel from './app/components/FixedLabel';
+
+import Camera from './app/components/Camera'; 
+import TabTwo from './app/components/TabTwo';
+
+export default TabNavigator({
+   Camera: { screen: Camera }, TabTwo: { screen: TabTwo },
+});
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      
+        <FixedLabel />
+    
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
