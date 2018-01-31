@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, List, ListItem, Thumbnail, Text, Body } from 'native-base';
-
+import axios from 'axios';
 
 
 export default class ListThumbnailExample extends Component {
 
 componentDidMount() {
     // Make a request for a user with a given ID
-    Axios.get('API URL')
+    axios.get('API URL')
         .then(response => { 
             this.setState({
                 items: response.data
@@ -17,7 +17,7 @@ componentDidMount() {
         .catch(function (error) { 
             console.log(error);
         });
-}∫g
+}
 
   render() {
     return (
