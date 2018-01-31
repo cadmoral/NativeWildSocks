@@ -1,8 +1,8 @@
 {
-  "packagerPort": 19009,
-  "packagerPid": 6582,
-  "expoServerPort": 19008,
-  "expoServerNgrokUrl": "https://mp-sb3.cadmoral.zsocket.exp.direct",
-  "packagerNgrokUrl": "https://packager.mp-sb3.cadmoral.zsocket.exp.direct",
-  "ngrokPid": 6599
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerPort": null,
+  "expoServerNgrokUrl": "https://dh-xfy.cadmoral.zsocket.exp.direct",
+  "packagerNgrokUrl": "https://packager.dh-xfy.cadmoral.zsocket.exp.direct",
+  "ngrokPid": 8355
 }
