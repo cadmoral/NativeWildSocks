@@ -35,6 +35,7 @@ export default class Camera2 extends React.Component {
         formData.append('picture', { uri: data.uri, name: 'photo.jpg', type: 'image/jpg' });
 
         axios
+
           .post('http://0e3e6626.ngrok.io/appmobile/web/users', formData)
           .then(res => {
             Vibration.vibrate();
