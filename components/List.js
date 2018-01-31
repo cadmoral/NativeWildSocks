@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, List, ListItem, Thumbnail, Text, Body, SwipeRow, View, Icon, Button  } from 'native-base';
+import { Container, Header, Content, List, ListItem, Thumbnail, Text, Body, SwipeRow, View, Icon, Button } from 'native-base';
 import axios from 'axios';
 
 
@@ -7,9 +7,10 @@ export default class ListThumbnailExample extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        items: []
+      items: []
     };
-}
+  }
+
 
 handleOnPress(){
  alert('Voter')
@@ -29,16 +30,16 @@ componentDidMount() {
     axios.get('http://0e3e6626.ngrok.io/appmobile/web/users')
 
 
-        .then(response => { 
-            this.setState({
-                items: response.data
-            });
-            console.log(response);
-        })
-        .catch(function (error) { 
-            console.log(error);
+      .then(response => {
+        this.setState({
+          items: response.data
         });
-}
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
 
   render() {
     return (
