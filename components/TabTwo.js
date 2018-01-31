@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Button, Alert, Text } from 'react- native';
+import { StyleSheet, View, Button, Alert, Text } from 'react-native';
 
 export default class TabTwo extends React.Component { 
     static navigationOptions = {
